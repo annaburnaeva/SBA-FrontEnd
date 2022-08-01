@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/registerform.css">
+</head>
+<body>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">MENU</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="../html/index.html">Home page</a>
+    <a href="../html/signuppage.html">About classes</a>
+  </div>
+</div>
+    <h1>  Create your account </h1>
+    <div class="container">
+      <form action="" name="loginForm" method="post" onSubmit="validateFormAll();">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Your name.." onkeyup="return validateName()" name="firstname" required>
+          <br/>
+          <h5 id="invalidName"></h5>
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Your last name.." onkeyup="return validateLastName()" name="lastname" required>
+          <br/>
+          <h5 id="invalidLastName"></h5>
+
+          <label for="email">email address</label>
+          <input type="text" id="email" name="email" placeholder="Your email.." onkeyup="return validateEmail()" name="email" required>
+          <br/>
+          <h5 id="invalidEmail"></h5>
+
+          <label for="phone">phone number</label>
+          <input type="text" id="phone" name="phone" placeholder="Your phone number" onkeyup="return validatePhone()" name="phone" required>
+          <br/>
+          <h5 id="invalidPhone"></h5>
+      
+          <label for="country">City</label>
+          <select id="country" name="country">
+            <option value="Pittsburgh">Pittsburgh</option>
+            <option value="Charlotte">Charlotte</option>
+            <option value="Baltimore">Baltimore</option>
+          </select>
+
+        <div>
+          <label for="pass1"><b>Enter Password</b></label>
+          <input type="password" id="pass1" name="pass1" placeholder="Enter your password" onkeyup="return validate()" name="pass1" required>
+          </div>
+        <div>
+        <label for="pass2"><b>Confirm Password</b></label>
+        <input type="password" id="pass2" name="pass2" placeholder="Confirm your password" oninput="return confirmPassword()">
+        </div>
+        <ul> The password must contain:
+          <li id="length">6 characters </li>
+          <li id="upper">one uppercase</li>
+          <li id="lower">one lowercase</li>
+          <li id="symbol">one symbol</li>
+          <li id="number">one number</li>  
+        </ul>
+        <input type="submit" id="submit" value="Submit" >   
+          <p>By clicking 'Submit' you agree to the FitnessClub Terms & Conditions and our Privacy Policy</p>    
+        </form>
+      </div>
+      <script src="../js/registerform.js"></script>
+</body>
+</html>
